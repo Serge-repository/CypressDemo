@@ -3,10 +3,9 @@
   "version": "1.0",
   "description": "Training framework",
   "scripts": {
-
   },
   "devDependencies": {
     "cypress": "^13.5.1"
-    
+
   }
 }
