@@ -4,6 +4,7 @@
   "description": "Training framework",
   "scripts": {},
   "devDependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.0",
+    "cypress-mochawesome-reporter": "^3.7.0"
   }
 }
