@@ -15,4 +15,19 @@ describe("Checkboxes & dropdowns test suite", () => {
         cy.get("select#dropdown" + " option:selected").should("have.text", "Option 1")
     })
 
+    it("Hover on dropdown test", () => {
+        cy.visit("https://magento.softwaretestingboard.com")
+        cy.get("a#ui-id-6").trigger('mouseover')
+        cy.get("a#ui-id-25").click()
+        cy.url().should("include", "bags")
+        cy.get("input#search").type("Fusion")
+        cy.wait(4000)
+        cy.get("div#search_autocomplete li span.qs-option-name").each(($element) => {
+            if ($element.text() == " Fusion Backpack") {
+                cy.wrap($element).click({ force: true })
+            }
+        })
+        cy.get("div.breadcrumbs strong").should("contain", "Search results for: 'Fusion Backpack'")
+    })
+
 })
