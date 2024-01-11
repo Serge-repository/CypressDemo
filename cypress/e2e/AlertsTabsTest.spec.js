@@ -13,7 +13,7 @@ describe("Alerts and tabs suite", () => {
         })
     })
 
-    it("Alerts test", () => {
+    it("Tabs switching test", () => {
         cy.visit("https://the-internet.herokuapp.com/windows")
         cy.get("a[href='/windows/new']").invoke("removeAttr", "target").click()
         cy.contains("New Window").should("be.visible")
